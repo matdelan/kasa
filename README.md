@@ -13,6 +13,7 @@ initialise projet :
     npm i
     npm add -D sass
     npm i react-router-dom
+    npm i react-bootstrap
 
 start projet :
     npm run dev 

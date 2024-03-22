@@ -1,0 +1,11 @@
+=anton-font
+  font-family: 'Anton', sans-serif
+  font-style: normal
+  font-weight: 400
+  line-height: normal    
+
+=mq($breakpoint)
+  @each $breakpoints, $size in $media
+    @if $breakpoint==$breakpoints
+      @media screen and (min-width : $size)
+        @content
