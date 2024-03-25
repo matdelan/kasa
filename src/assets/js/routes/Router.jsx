@@ -3,6 +3,7 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import PageError from '../pages/PageError'
 import Index from '../pages/Index'
+import About from '../pages/About'
 import './routes.sass'
 
 function Root() {
@@ -26,31 +27,22 @@ const router = createBrowserRouter([
         element: <Index/>,
         loader: () => {
           const data = fetch('./src/assets/js/data/logements.json').then(r=>r.json())
-          return defer({
-            data
-          })
+          return defer({ data })
         }
       },
       {
         path: 'apropos',
-        element: <div>ok</div>
+        element: <About/>,
+        loader: () => {
+          const aboutData = fetch('./src/assets/js/data/about.json').then(r=>r.json())
+          return defer({ aboutData })
+        }
       },
       {
-        path: 'gallerie',
-        children: [
-          /*{
-            path:'',
-             loader: () => {
-              
-             },
-            element: <Index/>
-          },*/
-          {
-            path: ':id',
-            element: <div>Img</div>
-          }
-        ]
+          path: ':id',
+          element: <div>Img</div>
       }
+      
     ]
   }
 ])

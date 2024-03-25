@@ -5,7 +5,6 @@ export default function RentalList() {
     const data = useAsyncValue()
    
     return <div className="rentalList">
-
         {
             data.map((rental) => (
                 <article className='rentalList__article' key={rental.id}>
@@ -14,5 +13,4 @@ export default function RentalList() {
                 </article>
         ))}
     </div>
-    
 }
