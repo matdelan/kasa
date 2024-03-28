@@ -1,9 +1,15 @@
+@keyframes anim-chevron
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(180deg)
+    
 .collapse
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    width: 100%
+    margin-bottom: 25px
     &__header
         display: flex
         justify-content: space-between
@@ -11,23 +17,23 @@
         color: white
         background-color: #FF6060
         padding: 12px
-        font-size: 1em
         border-radius: 10px
         line-height: 35px
-        width: 77%
+        width: 100%
         &-title
-            font-weight: 700
+            font-size: 1em
             margin: 0
         &-chevron
-            margin-right: 15px
+            transform: rotate(0deg)
+            animation: anim-chevron 500ms alternate forwards  
     &__content
-        width: 77%
+        width: 100%
         background-color: #f6f6f6
         margin: 0
-        margin-bottom: 25px
         font-size: 0.8em
         padding: 12px
     &__hidden
         display: none
 
-        
+.fa-chevron-up
+    margin-right: 20px

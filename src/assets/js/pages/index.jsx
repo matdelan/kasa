@@ -8,7 +8,7 @@ function Index() {
     const { data } = useLoaderData()
     
     return <>
-        <Banner text="Chez vous, partout et ailleurs" imgSrc="/public/background1.jpg"/>
+        <Banner text="Chez vous, partout et ailleurs" imgSrc="/background1.jpg"/>
         <Suspense>
             <Await resolve={data}>
                 <RentalList/>

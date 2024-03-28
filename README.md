@@ -17,3 +17,8 @@ initialise projet :
 
 start projet :
     npm run dev 
+
+
+# Install of github page for react
+ npm i gh-pages --save-dev
+ 
