@@ -1,0 +1,20 @@
+=Montserrat-font
+  font-family: 'Montserrat', sans-serif
+  font-style: normal
+  font-weight: 400
+  line-height: normal
+  font-size: 1.6em   
+
+=Montserrat-font-hight
+  font-family: 'Montserrat', sans-serif
+  font-style: normal
+  font-weight: 700 
+  font-size: 10em
+  margin: 0
+
+
+=mq($breakpoint)
+  @each $breakpoints, $size in $media
+    @if $breakpoint==$breakpoints
+      @media screen and (min-width : $size)
+        @content

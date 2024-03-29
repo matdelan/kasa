@@ -1,6 +1,6 @@
-import Banner from '../components/Banner/Banner'
+import Banner from '../../components/Banner/Banner'
 import { Suspense } from 'react'
-import Collapse from '../components/Collapse/Collapse'
+import Collapse from '../../components/Collapse/Collapse'
 import {  Await, useLoaderData} from 'react-router-dom'
 import './about.sass'
 
@@ -14,7 +14,9 @@ export default function About() {
                 {(aboutData) => 
                     <div className='about__content'>
                         {aboutData.map((data) => (
-                           <Collapse title={data.title} content={data.content}/>
+                           <li key={data.title}>
+                                <Collapse title={data.title} content={data.content}/>
+                            </li>
                         ))}
                     </div>
                 }

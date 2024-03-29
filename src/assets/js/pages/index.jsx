@@ -5,12 +5,12 @@ import Banner from '../components/Banner/Banner'
 
 
 function Index() {
-    const { data } = useLoaderData()
+    const { rentals } = useLoaderData()
     
     return <>
         <Banner text="Chez vous, partout et ailleurs" imgSrc="/background1.jpg"/>
         <Suspense>
-            <Await resolve={data}>
+            <Await resolve={rentals}>
                 <RentalList/>
             </Await>
         </Suspense>

@@ -1,9 +1,10 @@
 import { RouterProvider, createBrowserRouter , Outlet, defer} from 'react-router-dom'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-import PageError from '../pages/PageError'
+import PageError from '../pages/pageError/PageError'
 import Index from '../pages/Index'
-import About from '../pages/About'
+import About from '../pages/about/About'
+import PageRental from '../pages/PageRental/PageRental'
 import './routes.sass'
 
 function Root() {
@@ -26,8 +27,8 @@ const router = createBrowserRouter([
         path: '',
         element: <Index/>,
         loader: () => {
-          const data = fetch('./src/assets/js/data/logements.json').then(r=>r.json())
-          return defer({ data })
+          const rentals = fetch('./src/assets/js/data/logements.json').then(r=>r.json())
+          return defer({ rentals })
         }
       },
       {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
       },
       {
           path: ':id',
-          element: <div>Img</div>
+          element: <PageRental/>,
+          loader: () => {
+            const rentals = fetch('./src/assets/js/data/logements.json').then(r=>r.json())
+            return defer({ rentals })
+          }
       }
       
     ]

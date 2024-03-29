@@ -1,3 +1,9 @@
+@keyframes openList
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
 .rentalList
     background-color: #F6F6F6
     position: relative
@@ -8,22 +14,9 @@
     justify-content: center
     padding: 30px
     width: 85%
-    &__article
-        position: relative  
-        align-items: flex-end  
-        margin: 15px  
-    &__title
-        position: absolute
-        color: white
-        font-size: 0.7em
-        bottom: 0
-        width: 50%
-        margin: 20px 15px
-    &__img
-        object-fit: cover
-        height: 340px
-        width: 340px
-        border-radius: 10px
-        margin-right: 20px
+    animation: openList 800ms forwards
+    & li
+        list-style-type: none
+
         
         

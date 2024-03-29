@@ -3,6 +3,12 @@
         transform: rotate(0deg)
     100%
         transform: rotate(180deg)
+
+@keyframes open
+    0%
+        opacity: 0
+    100%
+        opacity: 1
     
 .collapse
     display: flex
@@ -32,6 +38,7 @@
         margin: 0
         font-size: 0.8em
         padding: 12px
+        animation: open 1s forwards
     &__hidden
         display: none
 
