@@ -4,6 +4,8 @@ import { Suspense } from 'react'
 import Collapse from '../../components/Collapse/Collapse'
 import IconStar from '../../components/IconStar/IconStar'
 import Carrousel from '../../components/Carrousel/Carrousel'
+import Portrait from '../../components/Portrait/Portrait'
+import RentalContent from '../../components/RentalContent/RentalContent'
 
 export default function PageRental() {
     const {rentals} = useLoaderData()
@@ -18,14 +20,20 @@ export default function PageRental() {
                         if(rental)
                             return <>
                                 <Carrousel imgLinks={rental.pictures}/>
-                                <p>{rental.id}</p> 
-
-                                <IconStar rating={rental.rating}/>
-                                <Collapse title="Description" content={rental.description}/>
-                                <Collapse title="Equipments" content={rental.equipments}/>
+                                <div className='pageRental'>
+                                    <RentalContent title={rental.title} location={rental.location} tags={rental.tags}/> 
+                                    <aside className='pageRental__aside'>
+                                        <Portrait host={rental.host} />
+                                        <IconStar rating={rental.rating}/>
+                                    </aside>
+                                </div>
+                                <div className='pageRental__collapse'>
+                                    <li className='pageRental__collapse-item'><Collapse title="Description" content={rental.description}/></li>
+                                    <li className='pageRental__collapse-item'><Collapse title="Equipments" content={rental.equipments}/></li>
+                                </div>
                             </>
                         else
-                            throw new Error("id not defined")
+                            throw new Error("id is not defined")
                     
                     }
                     

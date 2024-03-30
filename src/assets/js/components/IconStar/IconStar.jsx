@@ -8,12 +8,12 @@ export default function IconStar({rating}) {
     let i = 0
     for(i=0; i < maxStar;i++) {
         if(i < (rating))
-            stars.push(<i key={i} className="fa-solid fa-star"></i>)
+            stars.push(<i key={i} className="fa-solid fa-star star__color star__child"></i>)
         else
-            stars.push(<i key={i} className="fa-regular fa-star"></i>)
+            stars.push(<i key={i} className="fa-solid fa-star star__grey star__child"></i>)
     }
 
-    return <>
+    return <div className='star'>
             {stars} 
-    </>
+    </div>
 }
