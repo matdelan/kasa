@@ -19,7 +19,7 @@ export default function Carrousel({imgLinks}) {
              nb = maxImg
         setCurrentImg(nb)
     }
-    console.log(maxImg)
+
     switch(maxImg) {
         case 0:
             throw new Error("Carrousel Component : No image to loading")
@@ -29,7 +29,6 @@ export default function Carrousel({imgLinks}) {
                     <img className='carrousel__img' src={imgLinks[0]} alt="Rental image"/>
                 </div>
             </>)
-            break
         default:
             return<>
                 <div className='carrousel'>
@@ -39,6 +38,5 @@ export default function Carrousel({imgLinks}) {
                     <i onClick={handleClickAfter} className='fa-solid fa-chevron-right carrousel__inImg carrousel__arrow-right'></i>
                 </div>
             </>
-            break
     }
 }
