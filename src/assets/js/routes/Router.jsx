@@ -1,26 +1,17 @@
-import { RouterProvider, createBrowserRouter , Outlet, defer} from 'react-router-dom'
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
+import { RouterProvider, createBrowserRouter , defer} from 'react-router-dom'
+
 import PageError from '../pages/pageError/PageError'
 import Index from '../pages/Index'
 import About from '../pages/about/About'
 import PageRental from '../pages/PageRental/PageRental'
 import './routes.sass'
+import Layout from '../layout/Layout'
 
-function Root() {
-  return <>
-    <Header/>
-    <div className="container">
-      <Outlet/>
-    </div>
-    <Footer/>
-  </>
-}
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root/>,
+    element: <Layout/>,
     errorElement: <PageError/>,
     children: [
       {
