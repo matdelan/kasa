@@ -1,3 +1,5 @@
+@import '../../sass/style'
+
 header
     display: flex
     justify-content: center
@@ -8,8 +10,10 @@ header
     padding: 30px
     width: 90%
     &__logo
-        height: 70px
+        height: 40px
         object-fit: cover
+        +mq(md)
+            height: 70px
     &__nav
         flex-grow: 1
         &-list
@@ -20,7 +24,9 @@ header
         &-margin
             margin-right: 40px
         &-item
-            font-size: 0.9em
+            font-size: 0.5em
+            +mq(md)
+                font-size: 0.9em
             & a
                 text-decoration: none
                 color: black

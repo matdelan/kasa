@@ -13,7 +13,7 @@ initialise projet :
     npm i
     npm add -D sass
     npm i react-router-dom
-    npm i react-bootstrap
+    //npm i react-bootstrap
 
 start projet :
     npm run dev 
@@ -21,4 +21,8 @@ start projet :
 
 # Install of github page for react
  npm i gh-pages --save-dev
- 
+
+# Testing library
+ npm i --save-dev jest
+ npm i --save-dev @testing-library/react
+ npm install --save-dev babel-jest @babel/core @babel/preset-env @babel/preset-react
