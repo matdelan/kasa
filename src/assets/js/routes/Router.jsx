@@ -10,7 +10,8 @@ import Layout from '../layout/Layout'
 
 const router = createBrowserRouter([
   {
-    path: '/kasa-P10-ReactProject/',
+    ///kasa-P10-ReactProject/
+    path: '/',
     element: <Layout/>,
     errorElement: <PageError/>,
     children: [

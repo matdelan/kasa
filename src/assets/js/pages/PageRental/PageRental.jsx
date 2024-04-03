@@ -17,8 +17,9 @@ export default function PageRental() {
                 {(rentals) => 
                     { 
                         const rental = rentals.find(rental => (rental.id === id))
-                        if(rental)
-                            return <>
+                        if(!rental) throw new Error("id is not defined")
+
+                        return <>
                                 <Carrousel imgLinks={rental.pictures}/>
                                 <div className='pageRental'>
                                     <RentalContent title={rental.title} location={rental.location} tags={rental.tags}/> 
@@ -32,9 +33,6 @@ export default function PageRental() {
                                     <li className='pageRental__collapse-item'><Collapse title="Equipments" content={rental.equipments}/></li>
                                 </div>
                             </>
-                        else
-                            throw new Error("id is not defined")
-                    
                     }
                     
                 }
