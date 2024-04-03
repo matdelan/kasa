@@ -8,7 +8,7 @@ export default function About() {
     const { aboutData } = useLoaderData()
 
     return <>
-        <Banner text="" imgSrc="background2.jpg"/>
+        <Banner text="" imgSrc="./background2.jpg"/>
         <Suspense>
             <Await resolve={aboutData}>
                 {(aboutData) => 

@@ -7,35 +7,35 @@ import PageRental from '../pages/PageRental/PageRental'
 import './routes.sass'
 import Layout from '../layout/Layout'
 
-
+//./src/assets/js/data/logements.json
 const router = createBrowserRouter([
   {
     ///kasa-P10-ReactProject/
-    path: '/',
+    path: '/kasa-P10-ReactProject/',
     element: <Layout/>,
     errorElement: <PageError/>,
     children: [
       {
-        path: '',
+        path: '/kasa-P10-ReactProject/',
         element: <Index/>,
         loader: () => {
-          const rentals = fetch('./src/assets/js/data/logements.json').then(r=>r.json())
+          const rentals = fetch('./data/logements.json').then(r=>r.json())
           return defer({ rentals })
         }
       },
       {
-        path: 'apropos',
+        path: '/kasa-P10-ReactProject/apropos',
         element: <About/>,
         loader: () => {
-          const aboutData = fetch('./src/assets/js/data/about.json').then(r=>r.json())
+          const aboutData = fetch('./data/about.json').then(r=>r.json())
           return defer({ aboutData })
         }
       },
       {
-          path: ':id',
+          path: '/kasa-P10-ReactProject/:id',
           element: <PageRental/>,
           loader: () => {
-            const rentals = fetch('./src/assets/js/data/logements.json').then(r=>r.json())
+            const rentals = fetch('./data/logements.json').then(r=>r.json())
             return defer({ rentals })
           }
       }
@@ -45,6 +45,7 @@ const router = createBrowserRouter([
 ])
 
 function Router() {
+  console.log(window.location.pathname)
   return <RouterProvider router={router}/>
 }
 
