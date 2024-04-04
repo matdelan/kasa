@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter , defer} from 'react-router-dom'
 
 import PageError from '../pages/pageError/PageError'
-import Index from '../pages/Index'
+import Index from '../pages/Index.jsx'
 import About from '../pages/about/About'
 import PageRental from '../pages/PageRental/PageRental'
 import './routes.sass'
