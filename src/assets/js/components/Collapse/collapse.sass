@@ -1,3 +1,5 @@
+@import '../../sass/style'
+    
 @keyframes anim-chevron
     0%
         transform: rotate(0deg)
@@ -22,14 +24,18 @@
         align-items: center
         color: white
         background-color: #FF6060
-        padding: 12px
+        padding: 5px 0
         border-radius: 10px
         line-height: 35px
         width: 100%
+        +mq(md)
+            padding: 12px 0 
         &-title
-            font-size: 0.9em
-            margin: 0
+            font-size: 0.6em
+            margin: 0 0 0 10px
             font-weight: 600
+            +mq(md)
+                font-size: 0.9em
         &-chevron
             transform: rotate(0deg)
             animation: anim-chevron 500ms alternate forwards  
@@ -38,8 +44,10 @@
         background-color: #f6f6f6
         margin: 0
         font-size: 0.8em
-        padding: 12px
+        padding: 12px 0 
         animation: open 1s forwards
+    &__text
+        margin-left: 10px
     &__hidden
         display: none
 

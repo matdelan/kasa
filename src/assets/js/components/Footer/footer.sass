@@ -1,16 +1,26 @@
+@import '../../sass/style'
+
 .footer
     height: 209px
     background-color: black
     display: flex
     justify-content: center
     align-items: center
-    flex-direction: column
+    flex-direction: column       
     &__logo
-        margin-top: 50px
         object-fit: cover
         height: 40px
         width: 122px
     &__content
         color: white
+        width: 30%
+        font-size: 0.5em
+        text-align: center
+        margin-top: 5px
+        +mq(md)
+            width: 50%
+            font-size: 0.8em
+            margin-top: 25px
+
 
     

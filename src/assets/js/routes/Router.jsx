@@ -7,10 +7,8 @@ import PageRental from '../pages/PageRental/PageRental'
 import './routes.sass'
 import Layout from '../layout/Layout'
 
-//./src/assets/js/data/logements.json
 const router = createBrowserRouter([
   {
-    ///kasa-P10-ReactProject/
     path: '/kasa-P10-ReactProject/',
     element: <Layout/>,
     errorElement: <PageError/>,
@@ -39,13 +37,11 @@ const router = createBrowserRouter([
             return defer({ rentals })
           }
       }
-      
     ]
   }
 ])
 
 function Router() {
-  console.log(window.location.pathname)
   return <RouterProvider router={router}/>
 }
 

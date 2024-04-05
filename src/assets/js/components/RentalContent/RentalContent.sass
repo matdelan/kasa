@@ -1,25 +1,24 @@
-$primary-color : #FF6060
+@import '../../sass/style'
     
 .title
-    width: 65%
+    width: 100%
+    margin-bottom: 10px
+    +mq(md)
+        width: 65%
     &__title
-        color: $primary-color
-        font-size: 1.5em
+        color: $color-primary
+        font-size: 0.8em
         font-weight: 500
         margin: 0
+        +mq(md)
+            font-size: 1.5em
     &__location
-        font-size: 0.7em
+        font-size: 0.6em
         margin: 0
         color: black
         font-weight: 500
+        +mq(md)
+            font-size: 0.7em
     &__tags
         display: flex
         margin-top: 25px
-    &__tag
-        margin: 0 10px 0 0
-        padding: 5px 30px
-        background-color: $primary-color
-        border-radius: 15px
-        color: white
-        font-size: 0.5em
-        font-weight: 500

@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom'
 import './rental.sass'
 
 export default function Rental({rental}) {
-    //const path = "/kasa-P10-ReactProject/" + rental.id
     const path = rental.id
     return <>
         <NavLink to={path}>

@@ -1,3 +1,5 @@
+@import '../../sass/style'
+
 @keyframes openList
     0%
         opacity: 0
@@ -5,13 +7,16 @@
         opacity: 1
 
 .rentalList
-    background-color: #F6F6F6
+    +mq(md)
+        background-color: #F6F6F6
     position: relative
     border-radius: 20px
     display: flex
     flex-wrap: wrap
-    justify-content: space-between
+    +mq(md)
+        justify-content: space-between
     justify-content: center
+    align-items: center
     padding: 30px
     width: 85%
     animation: openList 800ms forwards

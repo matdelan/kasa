@@ -7,8 +7,12 @@ header
 
 .header
     display: flex
-    padding: 30px
+    padding: 10px
     width: 90%
+    justify-content: center
+    align-items: center
+    +mq(md)
+        padding: 30px
     &__logo
         height: 40px
         object-fit: cover
@@ -22,9 +26,12 @@ header
             justify-content: flex-end
             align-items: center
         &-margin
-            margin-right: 40px
+            margin-right: 10px
+            +mq(md)
+                margin-right: 40px
         &-item
-            font-size: 0.5em
+            font-size: 0.6em
+            font-weight: 500
             +mq(md)
                 font-size: 0.9em
             & a

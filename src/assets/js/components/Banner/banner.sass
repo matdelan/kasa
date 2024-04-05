@@ -5,9 +5,12 @@
     display: flex
     justify-content: center
     align-items: center
-    margin-bottom: 40px 
+    +mq(md)
+        margin-bottom: 40px 
     &__img
-        height: 220px
+        height: 120px
+        +mq(md)
+            height: 220px
         width: 90%
         object-fit: cover
         position: relative
@@ -18,12 +21,13 @@
     &__text
         color: white
         z-index: 10
-        font-weight: 500
+        font-weight: 700
         font-size: 1em
         position: absolute
-        width: 80%
-        text-align: center
+        width: 70%
         +mq(md)
             font-size: 1.5em
+            text-align: center
+            font-weight: 500
 
         

@@ -6,6 +6,7 @@ import IconStar from '../../components/IconStar/IconStar'
 import Carrousel from '../../components/Carrousel/Carrousel'
 import Portrait from '../../components/Portrait/Portrait'
 import RentalContent from '../../components/RentalContent/RentalContent'
+import Tag from '../../components/Tag/Tag'
 
 export default function PageRental() {
     const {rentals} = useLoaderData()
@@ -22,11 +23,16 @@ export default function PageRental() {
                         return <>
                                 <Carrousel imgLinks={rental.pictures}/>
                                 <div className='pageRental'>
-                                    <RentalContent title={rental.title} location={rental.location} tags={rental.tags}/> 
+                                    <div className='pageRental__title'>
+                                        <RentalContent title={rental.title} location={rental.location}/>                                    
+                                    </div>
                                     <aside className='pageRental__aside'>
-                                        <Portrait host={rental.host} />
-                                        <IconStar rating={rental.rating}/>
+                                            <Portrait host={rental.host} />
+                                            <IconStar rating={rental.rating}/>
                                     </aside>
+                                    <div className='pageRental__tags'>
+                                        {(rental.tags).map((tag, index) => <li key={index}><Tag tag={tag}/></li>)}
+                                    </div>
                                 </div>
                                 <div className='pageRental__collapse'>
                                     <li className='pageRental__collapse-item'><Collapse title="Description" content={rental.description}/></li>

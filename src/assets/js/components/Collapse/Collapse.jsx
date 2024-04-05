@@ -24,7 +24,7 @@ export default function Collapse({title, content}) {
                 <i onClick={handleClick} className={classIcon}></i>
             </div>
             <div className={classCollapse}>
-                <div >{content}</div>
+                <div className="collapse__text">{content}</div>
             </div>
         </article>
     </>

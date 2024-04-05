@@ -1,3 +1,5 @@
+@import '../../sass/style'
+    
 .carrousel
     display: flex
     justify-content: center
@@ -7,17 +9,27 @@
         width: 90%
         object-fit: cover
         border-radius: 20px
-        height: 415px
+        height: 280px
+        +mq(md)
+            height: 415px
     &__inImg
         position: absolute
         color: white
     &__arrow-right
         text-align: right
-        margin-left: 80%
-        font-size: 3.5em
+        margin-left: 70%
+        font-size: 1.5em
+        +mq(md)
+            margin-left: 80%
+            font-size: 3.5em
     &__arrow-left
         text-align: left
-        margin-right: 80%
-        font-size: 3.5em
+        margin-right: 70%
+        font-size: 1.5em
+        +mq(md)
+            margin-right: 80%
+            font-size: 3.5em
     &__count
-        margin-top: 380px
+        margin-top: 220px
+        +mq(md)
+            margin-top: 380px

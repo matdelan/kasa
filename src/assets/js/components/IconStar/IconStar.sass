@@ -1,12 +1,18 @@
-$primary-color : #FF6060
+@import '../../sass/style'
 
 .star
     display: flex
-    font-size: 0.9em
+    font-size: 0.6em
     margin-top: 25px
+    order: 1
+    +mq(md)
+        font-size: 0.9em
+        order: 2
     &__child
-        margin-right: 10px
+        margin-right: 4px
+        +mq(md)
+            margin-right: 10px
     &__grey
         color: lightGrey
     &__color
-        color: $primary-color
+        color: $color-primary

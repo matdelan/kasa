@@ -1,7 +1,9 @@
+@import '../../sass/style'
+
 .rental
     position: relative  
     align-items: flex-end  
-    margin: 15px  
+    margin: 15px 
     &__title
         position: absolute
         color: white
@@ -11,7 +13,10 @@
         margin: 20px 15px
     &__img
         object-fit: cover
-        height: 340px
-        width: 340px
+        height: 255px
+        width: 315px
         border-radius: 10px
-        margin-right: 20px
+        +mq(md)
+            height: 340px
+            width: 340px
+            margin-right: 20px
