@@ -14,7 +14,7 @@ export default function About() {
                 {(aboutData) => 
                     <div className='about__content'>
                         {aboutData.map((data) => (
-                           <li key={data.title}>
+                            <li key={data.title}>
                                 <Collapse title={data.title} content={data.content}/>
                             </li>
                         ))}

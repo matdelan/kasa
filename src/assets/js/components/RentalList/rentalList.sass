@@ -6,20 +6,20 @@
     100%
         opacity: 1
 
-.rentalList
-    +mq(md)
-        background-color: #F6F6F6
+.rentalList    
     position: relative
     border-radius: 20px
     display: flex
     flex-wrap: wrap
-    +mq(md)
-        justify-content: space-between
     justify-content: center
     align-items: center
     padding: 30px
     width: 85%
     animation: openList 800ms forwards
+    margin: 40px 0
+    +mq(md)
+        justify-content: space-between
+        background-color: #F6F6F6
     & li
         list-style-type: none
 

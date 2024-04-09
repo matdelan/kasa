@@ -6,10 +6,10 @@ import './rentalList.sass'
 export default function RentalList() {
     const rentals = useAsyncValue()
    
-    return <div className="rentalList">
+    return <ul className="rentalList">
         {
             rentals.map((rental) => (
                 <li key={rental.id}><Rental rental={rental}/></li>
         ))}
-    </div>
+    </ul>
 }

@@ -23,16 +23,14 @@ export default function PageRental() {
                         return <>
                                 <Carrousel imgLinks={rental.pictures}/>
                                 <div className='pageRental'>
-                                    <div className='pageRental__title'>
-                                        <RentalContent title={rental.title} location={rental.location}/>                                    
-                                    </div>
+                                    <RentalContent title={rental.title} location={rental.location}/>                                    
                                     <aside className='pageRental__aside'>
                                             <Portrait host={rental.host} />
                                             <IconStar rating={rental.rating}/>
                                     </aside>
-                                    <div className='pageRental__tags'>
+                                    <ul className='pageRental__tags'>
                                         {(rental.tags).map((tag, index) => <li key={index}><Tag tag={tag}/></li>)}
-                                    </div>
+                                    </ul>
                                 </div>
                                 <div className='pageRental__collapse'>
                                     <li className='pageRental__collapse-item'><Collapse title="Description" content={rental.description}/></li>
