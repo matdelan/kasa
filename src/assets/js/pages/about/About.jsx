@@ -12,13 +12,13 @@ export default function About() {
         <Suspense>
             <Await resolve={aboutData}>
                 {(aboutData) => 
-                    <div className='about__content'>
+                    <ul className='about__content'>
                         {aboutData.map((data) => (
                             <li key={data.title}>
                                 <Collapse title={data.title} content={data.content}/>
                             </li>
                         ))}
-                    </div>
+                    </ul>
                 }
             </Await>
         </Suspense>

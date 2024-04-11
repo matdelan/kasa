@@ -4,6 +4,7 @@ export default function Portrait({host}) {
         const name = host.name.split(" ")
         const firstName = name[0]
         const lastName = name[1]
+        
         return <div className='portrait'>
             <div className='portrait__name'>
                 <p className='portrait__name-first'>{firstName}</p>

@@ -3,7 +3,6 @@ import {  Await, useLoaderData} from 'react-router-dom'
 import RentalList from '../components/RentalList/RentalList'
 import Banner from '../components/Banner/Banner'
 
-
 function Index() {
     const { rentals } = useLoaderData()
     

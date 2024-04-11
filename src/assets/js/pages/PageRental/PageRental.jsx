@@ -32,10 +32,10 @@ export default function PageRental() {
                                         {(rental.tags).map((tag, index) => <li key={index}><Tag tag={tag}/></li>)}
                                     </ul>
                                 </div>
-                                <div className='pageRental__collapse'>
+                                <ul className='pageRental__collapse'>
                                     <li className='pageRental__collapse-item'><Collapse title="Description" content={rental.description}/></li>
                                     <li className='pageRental__collapse-item'><Collapse title="Equipments" content={rental.equipments}/></li>
-                                </div>
+                                </ul>
                             </>
                     }
                     
@@ -43,6 +43,5 @@ export default function PageRental() {
                 
             </Await>
         </Suspense>
-
     </>
 }

@@ -1,8 +1,6 @@
-
 import logoKasa from '/logoKasa.png'
 import "./header.sass"
 import { NavLink } from 'react-router-dom'
-
 
 function Header() {
 
@@ -22,6 +20,5 @@ function Header() {
         </header>
     </>
 }
-
 
 export default Header
