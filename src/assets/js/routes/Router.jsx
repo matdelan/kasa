@@ -8,12 +8,12 @@ import Layout from '../layout/Layout'
 
 const router = createBrowserRouter([
   {
-    path: '/kasa-P10-ReactProject/',
+    path: '/kasa/',
     element: <Layout/>,
     errorElement: <PageError/>,
     children: [
       {
-        path: '/kasa-P10-ReactProject/',
+        path: '/kasa/',
         element: <Index/>,
         loader: () => {
           const rentals = fetch('./data/logements.json').then(r=>r.json())
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: '/kasa-P10-ReactProject/apropos',
+        path: '/kasa/apropos',
         element: <About/>,
         loader: () => {
           const aboutData = fetch('./data/about.json').then(r=>r.json())
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         }
       },
       {
-          path: '/kasa-P10-ReactProject/:id',
+          path: '/kasa/:id',
           element: <PageRental/>,
           loader: () => {
             const rentals = fetch('./data/logements.json').then(r=>r.json())
