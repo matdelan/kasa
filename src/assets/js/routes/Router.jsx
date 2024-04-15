@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     errorElement: <PageError/>,
     children: [
       {
-        path: '/kasa/',
+        path: '',
         element: <Index/>,
         loader: () => {
           const rentals = fetch('./data/logements.json').then(r=>r.json())
